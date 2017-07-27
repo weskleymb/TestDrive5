@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:v="clr-namespace:TestDrive5.Views"
+    x:Class="TestDrive5.Views.MasterDetailView">
+
+    <MasterDetailPage.Master>
+        <!--<ContentPage  Title="Mestre">
+            <Label Text="Mestre" />
+        </ContentPage>-->
+        <v:MasterView />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <!--<ContentPage Title="Detalhe">
+            <Label Text="Detalhe" />
+        </ContentPage>-->
+        <NavigationPage>
+            <x:Arguments>
+                <v:ListagemView />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

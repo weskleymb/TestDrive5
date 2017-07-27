@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TestDrive5"
+    x:Class="TestDrive5.Views.ListagemView"
+    Title="Test Drive">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Secondary" Text="IFRN" Priority="0" />
+        <ToolbarItem Name="MenuItem2" Order="Secondary" Text="CNAT" Priority="1" />
+    </ContentPage.ToolbarItems>
+
+    <ListView 
+        x:Name="listViewVeiculos" 
+        ItemsSource="{Binding Veiculos}"
+        SelectedItem="{Binding VeiculoSelecionado}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Nome}" FontSize="20" VerticalTextAlignment="Center" />
+                            <Label Text=" - " VerticalTextAlignment="Center" />
+                            <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" TextColor="Red" VerticalTextAlignment="Center" />
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

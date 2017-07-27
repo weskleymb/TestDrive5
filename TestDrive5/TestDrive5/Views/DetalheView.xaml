@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TestDrive5.Views.DetalheView"
+    Title="{Binding Veiculo.Nome}">
+
+    <StackLayout>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Acessorios">
+                    <SwitchCell Text="{Binding TextoFreioAbs}" On="{Binding TemFreioAbs, Mode=TwoWay}" />
+                    <SwitchCell Text="{Binding TextoArCondicionado}" On="{Binding TemArCondicionado, Mode=TwoWay}" />
+                    <SwitchCell Text="{Binding TextoMp3Player}" On="{Binding TemMp3Player, Mode=TwoWay}" />
+                    <TextCell Text="{Binding ValorTotal}" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button 
+            Text="Proximo" 
+            VerticalOptions="End"
+            Command="{Binding ProximoCommand}" />
+    </StackLayout>
+
+</ContentPage>

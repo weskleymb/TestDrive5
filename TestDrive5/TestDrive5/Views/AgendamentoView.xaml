@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TestDrive5.Views.AgendamentoView"
+    Title="{Binding Agendamento.Veiculo.Nome}">
+
+    <StackLayout>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Dados Pessoais">
+                    <EntryCell Label="Nome:" Text="{Binding Nome}" />
+                    <EntryCell Label="Fone:" Text="{Binding Fone}" Keyboard="Telephone" />
+                    <EntryCell Label="Email:" Text="{Binding Email}" Keyboard="Email" />
+                </TableSection>
+                <TableSection Title="Horario">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Data:" VerticalTextAlignment="Center" Margin="12, 0, 0, 0" />
+                            <DatePicker Date="{Binding DataAgendamento}" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Hora:" VerticalTextAlignment="Center" Margin="12, 0, 0, 0" />
+                            <TimePicker Time="{Binding HoraAgendamento}" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button Text="Agendar" Command="{Binding AgendarCommand}" />
+    </StackLayout>
+
+</ContentPage>

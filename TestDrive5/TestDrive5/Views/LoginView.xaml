@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TestDrive5.Views.LoginView"
+    Title="Login">
+
+    <StackLayout VerticalOptions="CenterAndExpand" Margin="60">
+        <Image Source="ifrn.png" />
+        <Entry Placeholder="Usuario" Text="{Binding Usuario}" />
+        <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" />
+        <Button Text="Entrar" Command="{Binding EntrarCommand}" />
+    </StackLayout>
+
+</ContentPage>
+    
